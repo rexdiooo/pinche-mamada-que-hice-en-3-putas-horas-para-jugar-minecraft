@@ -56,6 +56,7 @@ def download_latest_release(download_path='.'):
 		with open(pathto, 'wb') as archivo:
 			archivo.write(requests.get(url).content)
 		return version
+	
 flnm=download_latest_release()
 if flnm.split(".")[-1] == "msp":
 	os.system(f"chmod +x {flnm} && ./{flnm}")
